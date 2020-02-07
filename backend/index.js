@@ -39,7 +39,7 @@ const dbConfig = require('./config/appConfig');
 
 mongoose.Promise = global.Promise
 
-mongoose.connect(dbConfig.url);
+mongoose.connect(dbConfig.url, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology : true });
 
 mongoose.connection.on('error', function() {
     console.log('Could not connect to the database. Exiting now...')
