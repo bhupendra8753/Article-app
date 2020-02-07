@@ -105,5 +105,6 @@ const normalizePort = val => {
   server.on("error", onError);
   server.on("listening", onListening);
   server.listen(port);
+  console.log('Server Listening on Port 3000!!')
 
 module.exports = app;
